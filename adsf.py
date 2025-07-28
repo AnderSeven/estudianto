@@ -5,12 +5,20 @@
 empleados = {}
 
 def registrar_empleados():
-    id = int(input("Ing"))
+    id = int(input("Ingese el id: "))
     nombre = input("Ingrese el nombre: ")
     edad = int(input("Ingrese la edad: "))
     departamento = input("Ingrese el departamento: ")
     sueldo_mensual = float(input("Ingrese su sueldo mensual: "))
+    empleados[id] = {
+        "nombre": nombre,
+        "edad": edad,
+        "departamento": departamento,
+        "sueldo_mensual": sueldo_mensual,
+        "bonificaciones": {}
+    }
     cantidad_bonificaciones = int(input("Cuantas bonificaciones tendra: "))
+
 
 opcion = 0
 a = False
