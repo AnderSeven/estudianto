@@ -5,9 +5,11 @@
 empleados = {}
 
 def registrar_empleados():
+    v = 0
     cantidad_empleados = int(input("Ingrese la cantidad de empleados que desea registrar: "))
     for i in range(cantidad_empleados):
-        id = int(input("Ingrese el id: "))
+        v += 1
+        id = int(input(f"Ingrese el id del empleado {v}: "))
         nombre = input("Ingrese el nombre: ")
         edad = int(input("Ingrese la edad: "))
         departamento = input("Ingrese el departamento: ")
