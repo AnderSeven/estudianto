@@ -28,7 +28,6 @@ def registrar_empleados():
             empleados[id]["bonificaciones"][motivo] = {
                 "bonificacion": bonifiacion
             }
-            print("\nSe ha registrado la bonificacion")
 
     print("\nSe ha registrado al empleado")
 
