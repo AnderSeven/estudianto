@@ -46,7 +46,10 @@ def mostrar_empleados_bonificaciones():
 
 def buscar_empleados():
     if len(empleados) > 0:
-
+        print("===Buscar empleado===")
+        buscar = int(input("Ingrese el ID del empleado: "))
+        if buscar in empleados:
+            print(f"Nombre: {empleados[buscar]['nombre']}, Edad: {empleados[buscar]['edad']}")
     else:
         print("No hay empleados registrados")
 
