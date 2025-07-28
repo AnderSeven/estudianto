@@ -31,6 +31,14 @@ def registrar_empleados():
 
     print("\nSe ha registrado al empleado")
 
+def mostrar_empleados_bonificaciones():
+    print("\n===Empleados registrados===")
+    if len(empleados) > 0:
+        for i in empleados:
+            print(f"\nNombre: {empleados[i]['nombre']}, ID: {empleados}")
+    else:
+        print("No hay estudiantes registrados")
+
 opcion = 0
 a = False
 while a == False:
