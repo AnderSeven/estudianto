@@ -5,7 +5,7 @@
 empleados = {}
 
 def registrar_empleados():
-    id = int(input("Ingese el id: "))
+    id = int(input("Ingrese el id: "))
     nombre = input("Ingrese el nombre: ")
     edad = int(input("Ingrese la edad: "))
     departamento = input("Ingrese el departamento: ")
@@ -21,7 +21,12 @@ def registrar_empleados():
     for i in range(cantidad_bonificaciones):
         motivo = input("Ingrese el motivo de la bonificacion: ")
         bonifiacion = float(input("Ingrese la cantidad de la bonificacion: "))
-        empleados[id]["bonificaciones"][motivo]
+        empleados[id]["bonificaciones"][motivo] = {
+            "bonificacion": bonifiacion
+        }
+        print("\nSe ha registrado la bonificacion")
+
+    print("Se ha registrado al empleado")
 
 opcion = 0
 a = False
@@ -34,7 +39,7 @@ while a == False:
     opcion = int(input("Elija una opcion: "))
     match opcion:
         case 1:
-            print("adsf")
+            registrar_empleados()
         case 2:
             print("asdf")
         case 3:
