@@ -9,11 +9,29 @@ def registrar_empleados():
     cantidad_empleados = int(input("Ingrese la cantidad de empleados que desea registrar: "))
     for i in range(cantidad_empleados):
         v += 1
-        id = int(input(f"Ingrese el id del empleado {v}: "))
+        s = False
+        while s == False:
+            id = int(input(f"Ingrese el id del empleado {v}: "))
+            if id in empleados:
+                print("ID invalido, ingreselo de nuevo")
+            else:
+                s = True
         nombre = input("Ingrese el nombre: ")
-        edad = int(input("Ingrese la edad: "))
+        s = False
+        while s == False:
+            edad = int(input("Ingrese la edad: "))
+            if edad > 18 and edad < 80:
+                s = True
+            else:
+                print("Edad invalida")
         departamento = input("Ingrese el departamento: ")
-        sueldo_mensual = float(input("Ingrese su sueldo mensual: "))
+        s = False
+        while s == False:
+            sueldo_mensual = float(input("Ingrese su sueldo mensual: "))
+            if sueldo_mensual > 0:
+                s = True
+            else:
+                print("Sueldo mensual invalido.")
         empleados[id] = {
             "nombre": nombre,
             "edad": edad,
@@ -24,7 +42,13 @@ def registrar_empleados():
         cantidad_bonificaciones = int(input("\nCuantas bonificaciones tendra: "))
         for i in range(cantidad_bonificaciones):
             motivo = input("Ingrese el motivo de la bonificacion: ")
-            bonifiacion = float(input("Ingrese la cantidad de la bonificacion: "))
+            s = False
+            while s == False:
+                bonifiacion = float(input("Ingrese la cantidad de la bonificacion: "))
+                if bonifiacion > 0:
+                    s = True
+                else:
+                    print("Bonificacion invalida")
             empleados[id]["bonificaciones"][motivo] = {
                 "bonificacion": bonifiacion
             }
