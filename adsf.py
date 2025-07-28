@@ -1,6 +1,12 @@
 #Desarrolle un programa en Python que permita registrar
 # empleados de una empresa. Cada empleado se identificará
 # por su ID numérico único, y se deben guardar los siguientes datos:
+#Nombre, Edad, Departamento, Sueldo mensual (mayor a 0), bonificaciones
+empleados = {}
+
+def registrar_empleados():
+    nombre = input("Ingrese el nombre: ")
+    edad = int
 
 opcion = 0
 a = False
@@ -20,6 +26,6 @@ while a == False:
             print("asdf")
         case 4:
             print("Gracias por usar el sistema")
-
+            a = True
         case _:
             print("Opcion invalida")
