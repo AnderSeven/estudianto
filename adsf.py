@@ -42,7 +42,13 @@ def mostrar_empleados_bonificaciones():
                 print(f"Motivo: {bonificaciones}")
                 print(f"Bonificacion: {bonificacion}")
     else:
-        print("No hay estudiantes registrados")
+        print("No hay empleados registrados")
+
+def buscar_empleados():
+    if len(empleados) > 0:
+
+    else:
+        print("No hay empleados registrados")
 
 opcion = 0
 a = False
