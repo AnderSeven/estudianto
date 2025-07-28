@@ -35,7 +35,8 @@ def mostrar_empleados_bonificaciones():
     print("\n===Empleados registrados===")
     if len(empleados) > 0:
         for i in empleados:
-            print(f"\nNombre: {empleados[i]['nombre']}, ID: {empleados}")
+            print(f"\nNombre: {empleados[i]['nombre']}, ID: {empleados}, Edad: {empleados[i]['edad']}, Departamento: {empleados[i]['departamento']}, Sueldo mensual: {empleados[i]['sueldo_mensual']}")
+            print("Bonificaciones: ")
     else:
         print("No hay estudiantes registrados")
 
