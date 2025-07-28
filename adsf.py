@@ -5,33 +5,35 @@
 empleados = {}
 
 def registrar_empleados():
-    id = int(input("Ingrese el id: "))
-    nombre = input("Ingrese el nombre: ")
-    edad = int(input("Ingrese la edad: "))
-    departamento = input("Ingrese el departamento: ")
-    sueldo_mensual = float(input("Ingrese su sueldo mensual: "))
-    empleados[id] = {
-        "nombre": nombre,
-        "edad": edad,
-        "departamento": departamento,
-        "sueldo_mensual": sueldo_mensual,
-        "bonificaciones": {}
-    }
-    cantidad_bonificaciones = int(input("Cuantas bonificaciones tendra: "))
-    for i in range(cantidad_bonificaciones):
-        motivo = input("Ingrese el motivo de la bonificacion: ")
-        bonifiacion = float(input("Ingrese la cantidad de la bonificacion: "))
-        empleados[id]["bonificaciones"][motivo] = {
-            "bonificacion": bonifiacion
+    cantidad_empleados = int(input("Ingrese la cantidad de empleados que desea registrar: "))
+    for i in range(cantidad_empleados):
+        id = int(input("Ingrese el id: "))
+        nombre = input("Ingrese el nombre: ")
+        edad = int(input("Ingrese la edad: "))
+        departamento = input("Ingrese el departamento: ")
+        sueldo_mensual = float(input("Ingrese su sueldo mensual: "))
+        empleados[id] = {
+            "nombre": nombre,
+            "edad": edad,
+            "departamento": departamento,
+            "sueldo_mensual": sueldo_mensual,
+            "bonificaciones": {}
         }
-        print("\nSe ha registrado la bonificacion")
+        cantidad_bonificaciones = int(input("\nCuantas bonificaciones tendra: "))
+        for i in range(cantidad_bonificaciones):
+            motivo = input("Ingrese el motivo de la bonificacion: ")
+            bonifiacion = float(input("Ingrese la cantidad de la bonificacion: "))
+            empleados[id]["bonificaciones"][motivo] = {
+                "bonificacion": bonifiacion
+            }
+            print("\nSe ha registrado la bonificacion")
 
-    print("Se ha registrado al empleado")
+    print("\nSe ha registrado al empleado")
 
 opcion = 0
 a = False
 while a == False:
-    print("===Menu empleados===")
+    print("\n===Menu empleados===")
     print("1. Registrar empleados")
     print("2. Mostrar todos los empleados y sus bonificaciones")
     print("3. Buscar empleado por ID")
