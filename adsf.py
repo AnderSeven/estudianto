@@ -37,8 +37,8 @@ def mostrar_empleados_bonificaciones():
         for i in empleados:
             print(f"\nNombre: {empleados[i]['nombre']}, ID: {empleados}, Edad: {empleados[i]['edad']}, Departamento: {empleados[i]['departamento']}, Sueldo mensual: {empleados[i]['sueldo_mensual']}")
             print("Bonificaciones: ")
-            for bonificaciones in empleados[i]['bonificaciones']:a
-
+            for bonificaciones in empleados[i]['bonificaciones']:
+                bonificacion = empleados[i]['bonificaciones'][bonificacion]['bonificacion']
     else:
         print("No hay estudiantes registrados")
 
@@ -55,7 +55,7 @@ while a == False:
         case 1:
             registrar_empleados()
         case 2:
-            print("asdf")
+            mostrar_empleados_bonificaciones()
         case 3:
             print("asdf")
         case 4:
