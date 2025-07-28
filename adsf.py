@@ -18,7 +18,10 @@ def registrar_empleados():
         "bonificaciones": {}
     }
     cantidad_bonificaciones = int(input("Cuantas bonificaciones tendra: "))
-
+    for i in range(cantidad_bonificaciones):
+        motivo = input("Ingrese el motivo de la bonificacion: ")
+        bonifiacion = float(input("Ingrese la cantidad de la bonificacion: "))
+        empleados[id]["bonificaciones"][motivo]
 
 opcion = 0
 a = False
