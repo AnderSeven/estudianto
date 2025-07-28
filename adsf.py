@@ -51,8 +51,8 @@ def buscar_empleados():
         if buscar in empleados:
             print(f"Nombre: {empleados[buscar]['nombre']}, Edad: {empleados[buscar]['edad']}. Departamento: {empleados[buscar]['departamento']}, Sueldo mensual: {empleados[buscar]['sueldo_mensual']}")
             print("Bonificaciones:")
-            for bonificaciones in empleados[buscar]['bonificaciones'].items():
-                print(f"Motivo: {bonificaciones['motivo']}")
+            for motivo, bonificaciones in empleados[buscar]['bonificaciones'].items():
+                print(f"Motivo: {motivo}")
                 print(f"Bonificacion: {bonificaciones['bonificacion']}")
     else:
         print("No hay empleados registrados")
