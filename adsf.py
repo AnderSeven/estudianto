@@ -72,7 +72,7 @@ while a == False:
         case 2:
             mostrar_empleados_bonificaciones()
         case 3:
-            print("asdf")
+            buscar_empleados()
         case 4:
             print("Gracias por usar el sistema")
             a = True
